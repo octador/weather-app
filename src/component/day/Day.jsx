@@ -1,6 +1,14 @@
 import React from 'react'
 
 function Day() {
+  let date =new Date();
+  let dayWeek = date.getUTCDate()
+  console.log(date);
+ console.log(dayWeek);
+
+
+
+
   return (
     <>
         <a href="#" style={{fontWeight: 'bold'}}>Thursday</a>
