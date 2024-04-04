@@ -2,13 +2,9 @@ import React from "react";
 import "../weatherCard/WeatherCard.css";
 import sun from "../icons/sun.svg";
 import Day from "../day/Day";
-// import axios from 'axios';
 
-function WeatherCard() {
-
-  // const axios = require('axios').default;
-  // console.log(axios);
-
+function WeatherCard({degres}) {
+console.log('ici',degres);
   return (
     <div className="weather card blue-grey darken-1">
       <div className="card-content white-text">
