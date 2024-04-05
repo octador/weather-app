@@ -1,23 +1,23 @@
 import React from "react";
 import "../weatherCard/WeatherCard.css";
-import sun from "../icons/sun.svg";
 import Day from "../day/Day";
 
-function WeatherCard({degres}) {
-console.log('ici',degres);
+function WeatherCard({degres, city,speed,icon,handleClickDay}) {
+
   return (
     <div className="weather card blue-grey darken-1">
       <div className="card-content white-text">
-        <span className="card-title">Lyon</span>
+        <span className="card-title">{city}</span>
         <p>
-          <img src={sun} />
+          <img src={icon} />
         </p>
-        <span className="temperature">15°</span>
-        <div className="wind">Vent 1km/h (360°)</div>
+        <span className="temperature">{degres}</span>
+        <div className="wind">Vent {speed}km/h (360°)</div>
       </div>
 
       <div className="card-action">
-        <Day />
+     
+        <Day handleClickDay={handleClickDay} />
       </div>
     </div>
   );
